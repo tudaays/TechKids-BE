@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>There, there!</title>
+    <meta charset="utf-8">
+    <script src="libs/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="noobAngular">
+    <div ng-controller="noobController">
+      <div>
+        Quantity: <input type="number" ng-model="qty"/>
+      </div>
+      <div>
+        Cost: <input type="number" ng-model="cost"/>
+        <select ng-model="inCurr">
+          <option ng-repeat="c in currencies">{{c}}</option>
+        </select>
+      </div>
+      Total
+      <p ng-repeat="c in currencies">
+        {{convert(c)}} {{c}}
+      </p>
+    </div>
+    <input type="button" value="Incre" ng-click="incre()"/>
+</body>
+
+</html>
