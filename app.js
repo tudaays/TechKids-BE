@@ -19,3 +19,9 @@ noobAngular.controller("noobController", ["$scope", function($scope){
     $scope.qty++;
   }
 }]);
+
+noobAngular.factory("currency", [function(){
+  return convert = function(mount, inCurr, outCurr) {
+    return mount * outCurr / inCurr;
+  }
+}])
